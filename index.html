@@ -22,6 +22,12 @@
     <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 
+    <!-- Load Javascript files -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.1.1/d3.min.js"></script>
+    <script defer src="https://rawgit.com/susielu/d3-annotation/master/d3-annotation.min.js"></script>
+    <script src="js/viz.js" defer type="module"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -56,13 +62,13 @@
                         <a class="page-scroll" href="#about">About</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#education">Education</a>
+                        <a class="page-scroll" href="#education">Education & Research</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#suspended">Satellite SSC</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#photos">Photos</a>
+                        <a class="page-scroll" href="#projects">Other Projects</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
@@ -99,9 +105,12 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>About Me</h2>
-                <p>[ADD text]<a href="http://startbootstrap.com/template-overviews/grayscale/">[link]</a>. </p>
-                <p>[ADD FUNNY D3 VISUALIZAITONS]</p>
+                <!-- <p>[ADD text]<a href="http://startbootstrap.com/template-overviews/grayscale/">[link]</a>. </p> -->
+                <p>I'm Ilan Valencius (pronounced a-lawn va-len-chus), a graduating senior at Boston College. Pursuing majors in both environmental science and computer science, I am trying to merge my passion of coding with my love of the environment. My research up until this point has been primarily focused on remote sensing of surface processes. Satellites are wonderful inventions and I enjoy using tools such as a <a href="https://earthengine.google.com/" target="blank">Google Earth Engine</a> to figure out what on earth is going on (get it?). In my graduate school research I am looking to branch out and work on applying machine learning techniques to physical problems</p>
+
+                <p>Outside of my studies I play volleyball and have been working on learning the guitar. I also like to hike, canoe, and fish.</p>
             </div>
+            <div id="age-chart"></div>
         </div>
     </section>
 
@@ -109,14 +118,23 @@
     <section id="education" class="content-section text-center">
         <div class="education-section">
             <div class="container">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Education</h2>
+                <div class="col-lg-8 col-lg-offset-2" style="backdrop-filter: blur(5px)">
+                    <h2>Education & Research</h2>
                     <p><strong>Boston College</strong>
                         <br>Geological Sciences B.S.
                         <br>Computer Science B.S.
                     </p>
+                    <a href="files/Ilan_Valencius_CV.pdf" class="btn btn-default btn-lg"></i>Curriculum Vitae</a>
+                    <p>
+                        <br><strong>The Snyder Lab</strong>
+                        <br>My senior thesis on remotely sensed suspended sediment monitoring (see <a class="page-scroll" href="#suspended">here</a>) was advised by <a href="https://www.bc.edu/bc-web/schools/mcas/departments/eesc/people/faculty-directory/noah-snyder.html" target="blank">Prof. Noah Snyder</a> at Boston College. The Snyder lab focuses on geomorphology of all kinds, with a focus on fluvial and coastal processes.
+                    </p>
 
-                    <a href="fill" class="btn btn-default btn-lg">[ADD RESUME]</a>
+                    <p>
+                        <strong>The Schaaf Lab</strong>
+                        <br>In high school and into college I worked for <a href="https://www.umb.edu/spectralmass" target="blank">Prof. Crystal Schaaf's Lab</a> based out of UMass Boston. Working under then doctoral candidate <a href="https://davieslab.oeb.harvard.edu/people/peter-brehm-boucher" target="blank">Dr. Peter Boucher</a>, I worked on investigating forest health using Terrestrial Lidar Scanners (TLS). 
+                    </p>
+
                 </div>
             </div>
         </div>
@@ -132,8 +150,9 @@
             <!-- </div> -->
             <div class="col-md-6">
                     <p>
-                    The dynamics of river suspended sediment, derived from soil erosion, are critical for understanding floodplain and coastal wetland evolution, as well as reservoir sedimentation. Although the U.S. Geological Survey (USGS) has conducted over 100k suspended sediment concentration (SSC) sampling campaigns, data availability is often sparse or altogether lacking for large river transects. Landsat derived SSC measurements have proven accurate enough to supplement USGS datasets, allowing unprecedented spatial analysis of SSC trends throughout large river systems (Dethier et al., 2020). Here, we build on this approach by applying it to higher spatial and temporal resolution datasets, namely the Sentinel-2 satellite. Through a cluster and regression approach, we have constrained the uncertainty of Sentinel-2 derived SSC to less than a factor of two, which has proven adequate for large rivers. In combination with the Landsat record, this allows for a multi-decadal analysis of sediment transport dynamics across multi-dammed systems. We apply these methods to the Chattahoochee River in Georgia and Alabama, USA. Using observations from 1984 to 2022, we find pronounced decreases in SSC downstream of dams along the river, with downstream reaches never regaining the same values as upstream observations. We also see a decreasing trend in SSC across the whole river reach, which could be indicative of changing land-use practices.
+                    The dynamics of river suspended sediment, derived from soil erosion, are critical for understanding floodplain and coastal wetland evolution, as well as reservoir sedimentation. Although the U.S. Geological Survey (USGS) has conducted over 100k suspended sediment concentration (SSC) sampling campaigns, data availability is often sparse or altogether lacking for large river transects. Landsat derived SSC measurements have proven accurate enough to supplement USGS datasets, allowing unprecedented spatial analysis of SSC trends throughout large river systems <a href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2019JF005033" target="blank">(Dethier et al., 2020)</a>. Here, we build on this approach by applying it to higher spatial and temporal resolution datasets, namely the Sentinel-2 satellite. Through a cluster and regression approach, we have constrained the uncertainty of Sentinel-2 derived SSC to less than a factor of two, which has proven adequate for large rivers. In combination with the Landsat record, this allows for a multidecadal analysis of sediment transport dynamics across multi-dammed systems. We apply these methods to the Chattahoochee River in Georgia and Alabama, USA. Using observations from 1984 to 2022, we find pronounced decreases in SSC downstream of dams along the river, with downstream reaches never regaining the same values as upstream observations. We also see a decreasing trend in SSC across the whole river reach, which could be indicative of changing land-use practices.
                     </p>
+                    <a href="files/Valencius-AGU2022.pdf" class="btn btn-default btn-lg"></i>Check out my AGU poster</a>
             </div>
             <div class="col-md-6">
                 <img id="west-point" src="img/westpoint.png" alt="West Point Dam and Lake">
@@ -145,13 +164,28 @@
     </section>
 
     <!-- Photos Section -->
-    <section id="photos" class="content-section text-center">
-        <div class="photos-section">
+    <section id="projects" class="content-section text-center">
+        <div class="projects-section">
             <div class="container">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Photos</h2>
-                    <p>[ADD TEXT]</p>
-                    <a href="http://startbootstrap.com/template-overviews/grayscale/" class="btn btn-default btn-lg">[ADD RESUME]</a>
+                <div class="col-lg-12" style="backdrop-filter: blur(10px)">
+                    <h2>Other Projects</h2>
+                    <p>
+                        <strong>Classification-4u</strong>
+                        <br>During my junior year I took a class in biomedical image analysis. This course focused on using machine learning methods in a variety of ways for medical imagery. The same sort of tasks show up in both medicine and the environmental sciences, namely semantic segmentation - the assignment of a label to every pixel in an image. The Snyder lab does this often with historical orthophotos to create records of logging and human development over time. This process is time intensive so I wanted to see if I could come up with a way to bring automatic segmentation pipelines to the environmental sciences.
+                    </p>
+                    <p>I identified technical and hardware limitations as the two primary drivers keeping machine learning inaccessible to many people. <a href="https://github.com/HenriquesLab/ZeroCostDL4Mic" target="blank">Zero Cost Deep Learning 4 Microscopy</a> is an amazing toolbox implemented in Google Colab, which allows any Google user access to a GPU (crucial for machine learning). Implemented as an intuitive GUI, ZeroCostDL4Mic allows those without coding experience to use high-power tensorflow models. My independent project focused on altering this toolbox for use with satellite imagery. This took the form of the following changes:<br>
+                    <br>1. Implementing caching so images of arbitrarily large size can be used.
+                    <br>2. Implementing a notebook for RGB imagery (can be edited to work with any number of bands).
+                    <br>3. Integrating the notebook with <a href="https://github.com/qubvel/segmentation_models" target="blank">segmentation_models</a>, a library that provides 4 separate model architectures with 25 different backbones.
+                    <br>4. Integrating the notebook with <a href="https://github.com/Vooban/Smoothly-Blend-Image-Patches" target="blank">Smooth Blending</a>. Blending is not as important for smaller microscopy images but is vital for increasing the accuracy and usability of larger land cover maps.
+                    </p>
+                    <a href="https://github.com/ivalencius/classification-4u" target="blank" class="btn btn-default btn-lg"></i>Check it out here</a>
+
+                    <!-- <p>
+                        <br><strong>Little Rock Nine Documentary</strong>
+                        <br>I did this as a National History Day project my sophomore year of high school and it has gotten over 81k views over the years. I just think thats neat. 
+                    </p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/RjwU-z255r0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
                 </div>
             </div>
         </div>
@@ -162,18 +196,18 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Contact me</h2>
-                <p>[ADD TEXT]</p>
-                <p><a href="mailto:feedback@startbootstrap.com">[email]</a>
+                <!-- <p>[ADD TEXT]</p> -->
+                <p><a href="mailto:valencig@bc.edu">valencig@bc.edu</a>
                 </p>
                 <ul class="list-inline banner-social-buttons">
                     <li>
-                        <a href="https://twitter.com/SBootstrap" class="btn btn-default btn-lg"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Twitter</span></a>
+                        <a href="https://www.linkedin.com/in/ilan-valencius/" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">LinkedIn</span></a>
                     </li>
                     <li>
-                        <a href="https://github.com/IronSummitMedia/startbootstrap" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                        <a href="https://github.com/ivalencius" class="btn btn-default btn-lg"><i class="fa fa-github fa-fw"></i> <span class="network-name">Github</span></a>
                     </li>
                     <li>
-                        <a href="https://plus.google.com/+Startbootstrap/posts" class="btn btn-default btn-lg"><i class="fa fa-google-plus fa-fw"></i> <span class="network-name">Google+</span></a>
+                        <a href="https://scholar.google.com/citations?hl=en&user=mqsG3MwAAAAJ&view_op=list_works&authuser=1&gmla=AJsN-F5HgIR7UaO_0Oo4K0gBmgWrEc9WEfnyBa5y_C2nSnzEWshF_VVQ2mrqXZr_j9pcd6JYs-EHbBYZNcO_E8HYQhAJblDiWakq1YgS64hHz4u2YS6I28Y" class="btn btn-default btn-lg"><i class="ai ai-google-scholar fa-fw"></i><span class="network-name">Google Scholar</span></a>
                     </li>
                 </ul>
             </div>
@@ -186,7 +220,7 @@
     <!-- Footer -->
     <footer>
         <div class="container text-center">
-            <p>Copyright &copy; Your Website 2014</p>
+            <p>Copyright &copy; Ilan Valencius 2022</p>
         </div>
     </footer>
 
@@ -200,7 +234,7 @@
     <script src="js/jquery.easing.min.js"></script>
 
     <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+    <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script> -->
 
     <!-- Custom Theme JavaScript -->
     <script src="js/grayscale.js"></script>

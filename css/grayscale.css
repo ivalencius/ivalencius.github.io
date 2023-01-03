@@ -278,7 +278,7 @@ a:focus {
     width: 100%;
     padding: 50px 0;
     color: #fff;
-    background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
+    background: url(../img/IMG_4965.JPG) no-repeat center center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -286,11 +286,11 @@ a:focus {
     -o-background-size: cover;
 }
 
-.photos-section {
+.projects-section {
     width: 100%;
     padding: 50px 0;
     color: #fff;
-    background: url(../img/filler.JPG) no-repeat center center scroll;
+    background: url(../img/DSC_0262.JPG) no-repeat center center scroll;
     background-color: #000;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -313,14 +313,14 @@ a:focus {
         padding: 100px 0;
     }
 
-    .photos-section {
+    .projects-section {
         padding: 100px 0;
     }
 
-    #map {
+    /* #map {
         height: 400px;
         margin-top: 250px;
-    }
+    } */
 }
 
 .btn {
