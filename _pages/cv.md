@@ -75,13 +75,41 @@ Talks
     {% include archive-single-talk-cv.html  %}
   {% endfor %}</ul>
   
+Research Posters 
+======
+* __Valencius, I.__, Sweeney R., Ming. Y., Wind Uncertainty and Capacity Planning During the Energy
+Transition, AGU, American Geophysical Union, Washington D.C., December 9-13, 2024
+
+* Sheehan C., Behn M., Dahl T. A., Snyder N., __Valencius, I.__, Cumulative Impacts of Multiple Dams
+on Watershed Sediment Dynamics: A Combined Approach Using Landscape Evolution and Delta
+Models, AGU, American Geophysical Union, Washington D.C., December 9-13, 2024
+
+* __Valencius, I.__, Sweeney R., Ming. Y., Wind Uncertainty and Capacity Planning During the Energy
+Transition, Boston College EESC department ERDC poster Session, October 2024
+
+* __Valencius I.__, Snyder N. P., Dethier E., Behn M. D., Sheehan C., Dahl T. A., (2022), Sentinel-2 and
+Landsat Derived Suspended Sediment Concentrations and Applicability to Multi-Dammed River
+Systems, AGU, American Geophysical Union, Chicago, December 12-16, 2022
+
+* Sheehan, C., Behn, M. D., Snyder N. P., Dahl, T. A., Hines, C., and __Valencius, I.__, Modeling the
+Anthropogenic Effects on Landscape Evolution at a Watershed Scale Using Landlab: A Preliminary
+Example from the Chestatee River in Northern Georgia, USA, AGU, American Geophysical Union,
+Chicago, December 12-16, 2022
 <!-- Teaching
 ======
   <ul>{% for post in site.teaching reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul> -->
   
-Other Activities
+Other Experiences and Interests
 ======
 * __Schiller Student Advisory Board__ (February 2024 - Present)
   * The Schiller Student Advisory Board facilitates the organization of environmental, health, and energy programming at Boston College through the Schiller Institute for Integrated Science and Society.
+
+* __The World Climate Research Programme (WCRP) Global KM-scale Hackathon__ (May 12th - May 16th, 2025)
+  * Princeton University-Geophysical Fluid Dynamics Laboratory
+  *From the Princeton node website: "The Princeton workshop will focus on simulations performed with GFDL’s X-SHiELD (eXperimental System for High-resolution prediction on Earth-to-Local Domains) model. This hackathon is part of the larger WCRP effort to push the boundaries of climate system modeling and digital innovation globally."
+
+* __Rossbypalooza__ (July 22nd - August 2nd 2024)
+  * University of Chicago
+  * From the Rossbypalooza website: "Rossbypalooza is a two-week long project-oriented summer school for people from a broad field of atmospheric, oceanic and planetary sciences. The goal is to provide a platform for interactions among students and faculty to understand climate extremes, their impacts, and their connection to climate change from various perspectives including small-to-large-scale dynamics and data-driven methodologies. The school will consist of lectures and projects where participants will work in groups to address a question of their choice, mentored by one of the faculty members."
