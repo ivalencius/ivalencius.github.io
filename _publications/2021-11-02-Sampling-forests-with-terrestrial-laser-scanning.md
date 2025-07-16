@@ -2,7 +2,7 @@
 title: "Sampling forests with terrestrial laser scanning"
 collection: publications
 permalink: /publication/2021-11-02-Sampling-forests-with-terrestrial-laser-scanning
-excerpt: 'This paper is about the number 1. The number 2 is left for future work.'
+excerpt: 'Terrestrial laser scanners (TLSs) have successfully captured various properties of individual trees and have potential to further increase the quality and efficiency of forest surveys.'
 date: 2021-11-02
 venue: 'Annals of Botany'
 paperurl: 'http://ivalencius.github.io/files/mcab073.pdf'
