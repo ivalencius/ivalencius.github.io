@@ -1,5 +1,5 @@
 ---
-title: "Trolltunga - Vestland county, Norway"
-excerpt: "September 2021<br/><img src='/images/IMG_6834.jpg'>"
+title: "Brown Dog Lab - Providence, RI"
+excerpt: "November 2024<br/><img src='/images/IMG_2014.jpeg'>"
 collection: portfolio
 ---

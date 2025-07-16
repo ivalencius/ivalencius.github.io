@@ -1,5 +1,5 @@
 ---
-title: "Preikestolen - Rogaland county, Norway"
-excerpt: "October 2021<br/><img src='/images/DSC_0334.JPG'>"
+title: "Mount Teide - Tenerife, Spain"
+excerpt: "March 2023<br/><img src='/images/PST00033.JPG'>"
 collection: portfolio
 ---
